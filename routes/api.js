@@ -15,7 +15,7 @@ module.exports = function(app) {
             if (err) {
                 res.status(500).send({message: err.message || "Errors were encounterd"})
             }else {
-                res.status(200).send( data)
+               return  res.status(200).send( {data, message: "success"})
             }
         })
     })
